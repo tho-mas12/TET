@@ -15,6 +15,15 @@ export default function App() {
 
   const t = translations[lang] || translations.en;
 
+  const handleAuthSuccess = (u) => {
+    setUser(u);
+    if (u && u.role === "admin") {
+      setActiveTab("admin");
+    } else {
+      setActiveTab("dashboard");
+    }
+  };
+
   const handleLogout = () => {
     setUser(null);
     setActiveTab("dashboard");
@@ -42,7 +51,7 @@ export default function App() {
             <AuthModal
               isOpen={true}
               onClose={null} // Cannot close initial login screen until logged in!
-              onAuthSuccess={(u) => setUser(u)}
+              onAuthSuccess={handleAuthSuccess}
               lang={lang}
             />
           </div>
@@ -85,7 +94,7 @@ export default function App() {
         <AuthModal
           isOpen={isAuthOpen}
           onClose={() => setIsAuthOpen(false)}
-          onAuthSuccess={(u) => setUser(u)}
+          onAuthSuccess={handleAuthSuccess}
           lang={lang}
         />
       )}

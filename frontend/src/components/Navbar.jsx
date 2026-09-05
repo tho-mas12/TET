@@ -14,17 +14,13 @@ export default function Navbar({ activeTab, setActiveTab, user, onOpenAuth, onLo
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-sky-100 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
-        {/* Brand Logo with Official Circular Emblem */}
+        {/* Brand Title with Clean Icon */}
         <div 
-          onClick={() => setActiveTab("dashboard")} 
+          onClick={() => setActiveTab(isAdmin ? "admin" : "dashboard")} 
           className="flex items-center space-x-3 cursor-pointer group"
         >
-          <div className="w-10 h-10 rounded-full p-0.5 bg-gradient-to-tr from-[#1E3A8A] to-[#0284C7] shadow-md shadow-[#0284C7]/20 group-hover:scale-105 transition-transform duration-200">
-            <img
-              src="/logo.jpg"
-              alt="TET Logo"
-              className="w-full h-full object-cover rounded-full border border-white"
-            />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#1E3A8A] to-[#0284C7] text-white flex items-center justify-center shadow-md shadow-[#0284C7]/20 group-hover:scale-105 transition-transform duration-200">
+            <GraduationCap className="w-6 h-6 text-white" />
           </div>
           <div>
             <span className="text-xl font-extrabold text-[#1E3A8A] tracking-tight">
