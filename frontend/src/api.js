@@ -17,8 +17,21 @@ export async function fetchApi(endpoint, options = {}) {
   } catch (err) {
     console.warn(`API fallback triggered for ${endpoint}:`, err.message);
 
-    // Fallback data when backend is not running or deployed on static host
+    // Smart fallback data check for Admin vs Student login
     if (endpoint.startsWith("/user/profile") || endpoint.startsWith("/auth/login")) {
+      const bodyStr = typeof options.body === "string" ? options.body : JSON.stringify(options.body || {});
+      const isAdminLogin = bodyStr.includes("admin@tet.com") || bodyStr.includes("admin") || endpoint.includes("email=admin");
+
+      if (isAdminLogin) {
+        return {
+          id: 99,
+          name: "Platform Administrator",
+          email: "admin@tet.com",
+          role: "admin",
+          streak_count: 50
+        };
+      }
+
       return {
         id: 1,
         name: "Kavitha S. (Teacher Candidate)",
