@@ -1,8 +1,8 @@
 # Proof of Concept (PoC), Multi-Year Commercial Proposal & Technical Architecture Document
 ## Project: TET Platform — Tamil Nadu Teachers Welfare Association Study Portal
 **Domain Name**: `tnteachers.in` (5-Year Contract)  
-**Target Hosting**: BigRock VPS (Virtual Private Server) Hosting (3-Year Contract)  
-**Document Version**: 1.2.0 (Production & Multi-Year Commercial Proposal)  
+**Target Hosting**: BigRock VPS (Virtual Private Server) Hosting (1-Year & 3-Year Options)  
+**Document Version**: 1.3.0 (Production & Multi-Year Commercial Proposal)  
 **Date**: September 2026  
 
 ---
@@ -126,9 +126,7 @@ If the Gemini API key is omitted or daily free rate limits are reached during pe
 
 ---
 
-## 5. Multi-Year Commercial Proposal & Budget Breakdown (`tnteachers.in`)
-
-Below is the updated multi-year itemized commercial cost proposal featuring **5 Years Domain Registration** and **3 Years BigRock VPS Hosting Package**.
+## 5. Commercial Proposal & Budget Breakdown (`tnteachers.in`)
 
 ### 5.1. One-Time Setup & Development Costs
 
@@ -140,26 +138,29 @@ Below is the updated multi-year itemized commercial cost proposal featuring **5 
 
 ---
 
-### 5.2. Multi-Year Infrastructure & Hosting Package (5 Yrs Domain + 3 Yrs VPS)
+### 5.2. OPTION A: 5-Year Domain + 1-Year BigRock VPS Hosting Package
+
+| Infrastructure Item | Service Provider / Specs | Billing Duration | Cost (INR ₹) |
+| :--- | :--- | :--- | :--- |
+| **Domain Registration (`tnteachers.in`)** | BigRock Domain Registrar | **5 Years Contract** (~ ₹ 699 / Year) | **₹ 3,495** |
+| **BigRock VPS Hosting Server** | 4 vCPU, 8 GB RAM, 100 GB NVMe SSD | **1 Year Contract** (~ ₹ 1,499 / Month) | **₹ 17,988** |
+| **SSL Security Certificate** | Let's Encrypt | **1 Year (Included)** | **₹ 0 (FREE)** |
+| **Google Gemini AI Engine** | Google AI Studio | **1 Year (FREE Tier)** | **₹ 0 (FREE)** |
+| **Total Infrastructure (Option A)** | **5-Yr Domain + 1-Yr Hosting** | **5 Yrs Domain / 1 Yr Hosting** | **₹ 21,483** |
+| **GRAND TOTAL (Dev + Option A Infra)** | **Development + 5-Yr Domain + 1-Yr Hosting** | **Contract Total** | **₹ 71,483** |
+
+---
+
+### 5.3. OPTION B: 5-Year Domain + 3-Year BigRock VPS Hosting Package
 
 | Infrastructure Item | Service Provider / Specs | Billing Duration | Cost (INR ₹) |
 | :--- | :--- | :--- | :--- |
 | **Domain Registration (`tnteachers.in`)** | BigRock Domain Registrar | **5 Years Contract** (~ ₹ 699 / Year) | **₹ 3,495** |
 | **BigRock VPS Hosting Server** | 4 vCPU, 8 GB RAM, 100 GB NVMe SSD | **3 Years Contract** (~ ₹ 1,499 / Month) | **₹ 53,964** |
 | **SSL Security Certificate** | Let's Encrypt | **3 Years (Included)** | **₹ 0 (FREE)** |
-| **Google Gemini AI Engine** | Google AI Studio | **3 Years (FREE Tier)** | **₹ 0 (FREE Tier)** |
-| **Total Multi-Year Infrastructure Package** | **Combined 5-Yr Domain + 3-Yr VPS Hosting** | **5 Yrs Domain / 3 Yrs Hosting** | **₹ 57,459** |
-
----
-
-### 5.3. Total Commercial Summary
-
-| Investment Category | Breakdown | Total Cost (INR ₹) |
-| :--- | :--- | :--- |
-| **One-Time Development & VPS Setup** | Software engineering, UI/UX, backend & server setup | **₹ 50,000** |
-| **Domain Registration (`tnteachers.in`)** | 5 Years Contract | **₹ 3,495** |
-| **BigRock VPS Server Hosting** | 3 Years Contract (4 vCPU, 8GB RAM, 100GB SSD) | **₹ 53,964** |
-| **TOTAL CONTRACT INVESTMENT** | **Dev + 5-Yr Domain + 3-Yr Hosting** | **₹ 1,07,459** |
+| **Google Gemini AI Engine** | Google AI Studio | **3 Years (FREE Tier)** | **₹ 0 (FREE)** |
+| **Total Infrastructure (Option B)** | **5-Yr Domain + 3-Yr Hosting** | **5 Yrs Domain / 3 Yrs Hosting** | **₹ 57,459** |
+| **GRAND TOTAL (Dev + Option B Infra)** | **Development + 5-Yr Domain + 3-Yr Hosting** | **Contract Total** | **₹ 1,07,459** |
 
 ---
 
@@ -247,4 +248,4 @@ certbot --nginx -d tnteachers.in -d www.tnteachers.in
 
 ## 8. Executive Conclusion
 
-The **TET Platform** (`tnteachers.in`) offers an enterprise-grade learning portal at an exceptionally cost-effective price point. By locking in a **5-Year Domain** and **3-Year BigRock VPS Hosting**, the platform achieves long-term financial predictability, zero Gemini AI API overheads, and immediate deployment readiness.
+The **TET Platform** (`tnteachers.in`) offers an enterprise-grade learning portal at an exceptionally cost-effective price point. With options for a **5-Year Domain + 1-Year Hosting Package (₹ 71,483 total)** or **5-Year Domain + 3-Year Hosting Package (₹ 1,07,459 total)**, the platform provides financial flexibility, zero Gemini AI API overheads, and complete production readiness.
