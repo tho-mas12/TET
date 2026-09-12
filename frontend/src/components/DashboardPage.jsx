@@ -10,7 +10,9 @@ import {
   BookOpen, 
   ArrowRight, 
   Bell, 
-  Calendar
+  Calendar,
+  Globe,
+  ExternalLink
 } from "lucide-react";
 import { fetchApi } from "../api";
 import { translations } from "../translations";
@@ -245,6 +247,63 @@ export default function DashboardPage({ user, onNavigateToLearning, lang = "en" 
         </div>
 
       </div>
+
+      {/* GOOGLE EDUCATION NEWS FEED */}
+      {dashboardData?.news_feed?.length > 0 && (
+        <div className="bg-white border border-sky-100 rounded-3xl p-6 shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h3 className="text-base font-bold text-[#1E3A8A] flex items-center space-x-2">
+                <Globe className="w-5 h-5 text-[#0284C7] animate-pulse" />
+                <span>{t.educationNewsTitle}</span>
+              </h3>
+              <p className="text-xs text-slate-500 font-medium mt-0.5">
+                {t.educationNewsSubtitle}
+              </p>
+            </div>
+            <span className="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-300 text-emerald-700 text-[10px] font-black uppercase tracking-wider flex items-center space-x-1.5">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+              <span>{t.liveNewsBadge}</span>
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {dashboardData.news_feed.map((news) => (
+              <a
+                key={news.id}
+                href={news.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-4 rounded-2xl bg-sky-50/50 border border-sky-100 hover:border-[#0284C7]/40 hover:bg-sky-50 transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="px-2 py-0.5 rounded bg-sky-100 text-[#0284C7] border border-[#0284C7]/30 text-[10px] font-bold">
+                      {news.category || "Education"}
+                    </span>
+                    <span className="text-[10px] font-semibold text-slate-400">
+                      {news.date}
+                    </span>
+                  </div>
+                  <h4 className="text-xs font-bold text-[#1E3A8A] group-hover:text-[#0284C7] transition-colors leading-snug line-clamp-2">
+                    {news.title}
+                  </h4>
+                </div>
+
+                <div className="mt-3 pt-2.5 border-t border-sky-100 flex items-center justify-between text-[11px] font-bold text-[#0284C7]">
+                  <span className="text-slate-500 font-medium truncate text-[10px]">
+                    {news.source}
+                  </span>
+                  <span className="flex items-center space-x-1 group-hover:underline">
+                    <span>{t.readFullNews}</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* ANNOUNCEMENTS SECTION */}
       {announcements.length > 0 && (

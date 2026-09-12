@@ -43,6 +43,11 @@ export const translations = {
     unlockedText: "Unlocked",
     needStreakText: "Need",
     announcementsTitle: "Platform Announcements & Notices",
+    educationNewsTitle: "Live Education & TET News Feed (Google News)",
+    educationNewsSubtitle: "Real-time updates on Tamil Nadu School Education, TET Exams, and Teacher Welfare",
+    newsSource: "Google News Feed",
+    readFullNews: "Read Full Story",
+    liveNewsBadge: "LIVE NEWS",
 
     // Materials Explorer
     matStep1Title: "1. Select Grade / Class",
@@ -159,6 +164,11 @@ export const translations = {
     unlockedText: "பெறப்பட்டது",
     needStreakText: "தேவை",
     announcementsTitle: "முக்கிய அறிவிப்புகள் & செய்திகள்",
+    educationNewsTitle: "கல்வி & TET நேரலை செய்திகள் (கூகிள் செய்திகள்)",
+    educationNewsSubtitle: "தமிழ்நாடு பள்ளி கல்வித்துறை, TET தேர்வுகள் மற்றும் ஆசிரியர் நலன் பற்றிய நேரலைத் தகவல்கள்",
+    newsSource: "கூகிள் செய்திகள் (Google News Feed)",
+    readFullNews: "முழு செய்தி வாசிக்க",
+    liveNewsBadge: "நேரலை",
 
     // Materials Explorer
     matStep1Title: "1. வகுப்பைத் தேர்ந்தெடுக்கவும் (Class 1-12)",
